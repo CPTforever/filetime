@@ -51,10 +51,10 @@ cfg_if::cfg_if! {
         #[path = "wasm.rs"]
         mod imp;
     } else if #[cfg(target_os = "twizzler")] {
-        #[path = "wasm.rs"]
+        #[path = "twizzler.rs"]
         mod imp;
     } else {
-        #[path = "unix/mod.rs"]
+        #[path = "twizzler.rs"]
         mod imp;
     }
 }
