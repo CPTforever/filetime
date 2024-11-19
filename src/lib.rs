@@ -50,6 +50,9 @@ cfg_if::cfg_if! {
     } else if #[cfg(all(target_family = "wasm", not(target_os = "emscripten")))] {
         #[path = "wasm.rs"]
         mod imp;
+    } else if #[cfg(target_os = "twizzler")] {
+        #[path = "wasm.rs"]
+        mod imp;
     } else {
         #[path = "unix/mod.rs"]
         mod imp;
