@@ -54,7 +54,7 @@ cfg_if::cfg_if! {
         #[path = "twizzler.rs"]
         mod imp;
     } else {
-        #[path = "twizzler.rs"]
+        #[path = "unix/mod.rs"]
         mod imp;
     }
 }
